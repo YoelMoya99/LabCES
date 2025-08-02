@@ -1,9 +1,12 @@
-from src.cls.dataAcquisitionSystem import dataAcquisitionSystem
+from src.cls.dataAquisitionSystem import dataAquisitionSystem
 
 def main() -> None:
 
-    o = dataAcquisitionSystem()
-    o.PROCESS1()
+    o = dataAquisitionSystem()
+    o.presentState = o.state1
+
+    while True:
+        o.presentState()
 
 
 if __name__ == "__main__":
